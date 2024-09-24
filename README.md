@@ -2,10 +2,7 @@
 
 A simple class to ease the task of downloading files from the net
 
-
-- [Download source files - 5.6 Kb](https://raw.githubusercontent.com/ChrisMaunder/webgrab/master/docs/assets/WebGrab_src.zip)
-
-![Sample Image - WebGrab.gif](https://raw.githubusercontent.com/ChrisMaunder/webgrab/master/docs/assets/WebGrab.gif)
+![Sample Image - WebGrab.gif](https://raw.githubusercontent.com/ChrisMaunder/webgrab/master/docs/assets/webgrab.gif)
 
 `CWebGrab` is a simple class that allows you to quickly and easily download files from the net. The class is merely a light wrapper for the MFC internet classes, and as such supports any protocol that the MFC classes support. 
 
@@ -16,9 +13,7 @@ BOOL GetFile(LPCTSTR szURL, CString& strBuffer,
              LPCTSTR szAgentName = NULL, CWnd* pWnd = NULL);
 ```
 
-> 
-> 
-> Downloads a file from the given URL 
+Downloads a file from the given URL 
 
 - `szURL` is the URL
 - `strBuffer` is a `CString` buffer that will hold the contents of the downloaded file
@@ -31,8 +26,6 @@ BOOL GetFileInfo(LPCTSTR  szURL, CString& strLastModified, DWORD& dwSize,
                  CWnd* pWnd = NULL);
 ```
 
-> 
-> 
 > (Added by Ravi Bhavnani) Retrieves the information about a file from the given URL 
 
 - `szURL` is the URL
@@ -47,74 +40,56 @@ Bryce Burrows kindly updated the code to include the following functions:
 void SetUseProxy(bool use);
 ```
 
-> 
-> 
-> Sets whether or not to use a proxy
+Sets whether or not to use a proxy
 
 ```cpp
 void SetProxyServer(LPCSTR server);
 ```
 
-> 
-> 
-> Sets the proxy server
+Sets the proxy server
 
 ```cpp
 void SetProxyPort(UINT port);
 ```
 
-> 
-> 
-> Sets the proxy port
+Sets the proxy port
 
 ```cpp
 void SetProxy(LPCSTR proxy, WORD port, bool use=true);
 ```
 
-> 
-> 
-> Sets the proxy information in one call
+Sets the proxy information in one call
 
 ```cpp
 void SetForceReload (bool bForceReload)
 ```
 
-> 
-> 
-> Sets whether or not to force a reload when downloading a document. If a force reload is set the the document will not be a cached version.
+Sets whether or not to force a reload when downloading a document. If a force reload is set the the document will not be a cached version.
 
 ```cpp
 void GetForceReload()
 ```
 
-> 
-> 
-> Gets whether or not to force a reload when downloading a document.
+Gets whether or not to force a reload when downloading a document.
 
 ```cpp
 void SetTimeOut(DWORD timeOut);
 ```
 
-> 
-> 
-> Sets the timeout for the operation
+Sets the timeout for the operation
 
 ```cpp
 double GetRate();
 ```
 
-> 
-> 
-> Retrieves the download rate in Kb/sec
+Retrieves the download rate in Kb/sec
 
 ```cpp
 SHORT GetErrorCode();
 CString GetErrorMessage();
 ```
 
-> 
-> 
-> Get the error code and message (if any)
+Get the error code and message (if any)
 
 ## Example of use
 
